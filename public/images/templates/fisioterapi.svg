@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+    <pattern id="p" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M28 18v20M18 28h20" stroke="#fff" stroke-opacity=".09" stroke-width="4" stroke-linecap="round"/></pattern>
+    <radialGradient id="r" cx=".85" cy=".1" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect width="1200" height="675" fill="url(#p)"/>
+  <rect width="1200" height="675" fill="url(#r)"/>
+  <circle cx="1010" cy="520" r="300" fill="#fff" fill-opacity=".06"/>
+  <circle cx="1010" cy="520" r="200" fill="#fff" fill-opacity=".06"/>
+  <g transform="translate(820 230) scale(11)" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.25 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM7.5 11.25l2.25-3h4.5l2.25 3 2.25.75M10.5 8.25 9 14.25l3 2.25V21m-3-6.75L6.75 21M13.5 12l1.5 3h3"/></g>
+  <rect x="80" y="86" rx="22" ry="22" width="250" height="44" fill="#fff" fill-opacity=".16"/>
+  <text x="105" y="116" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#fff">TRYOUT CPNS</text>
+  <text x="80" y="300" font-family="Fraunces, Georgia, serif" font-size="78" font-weight="600" fill="#fff">SKB Fisioterapi</text>
+  <text x="82" y="360" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="30" font-weight="500" fill="#fff" fill-opacity=".85">Tryout CPNS Nakes</text>
+  <rect x="80" y="520" width="120" height="8" rx="4" fill="#fff" fill-opacity=".8"/>
+  <rect x="210" y="520" width="60" height="8" rx="4" fill="#fff" fill-opacity=".4"/>
+</svg>

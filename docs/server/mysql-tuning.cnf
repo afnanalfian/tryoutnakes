@@ -1,0 +1,16 @@
+# /etc/mysql/mysql.conf.d/zz-tryoutnakes.cnf  (VPS 4 GB RAM)
+[mysqld]
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+innodb_buffer_pool_size = 1G
+innodb_log_file_size = 256M
+innodb_flush_log_at_trx_commit = 2
+innodb_flush_method = O_DIRECT
+max_connections = 80
+table_open_cache = 2000
+tmp_table_size = 64M
+max_heap_table_size = 64M
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/slow.log
+long_query_time = 1
+skip-name-resolve

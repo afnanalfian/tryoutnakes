@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root { color-scheme: light; }
+    html { -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+    body { @apply bg-paper text-slate-700 antialiased; font-feature-settings: "ss01", "cv11"; }
+    [x-cloak] { display: none !important; }
+    ::selection { @apply bg-brand-200 text-navy-900; }
+    input[type=number]::-webkit-inner-spin-button { opacity: .5; }
+}
+
+@layer components {
+    /* Tombol */
+    .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-150 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[.98]; }
+    .btn-sm { @apply px-3 py-1.5 text-xs rounded-lg; }
+    .btn-lg { @apply px-6 py-3.5 text-[15px] rounded-2xl; }
+    .btn-primary { @apply btn bg-navy-900 text-white shadow-sm hover:bg-navy-800; }
+    .btn-brand { @apply btn bg-brand-600 text-white shadow-sm shadow-brand-600/20 hover:bg-brand-700; }
+    .btn-mint { @apply btn bg-mint-600 text-white hover:bg-mint-700; }
+    .btn-outline { @apply btn border border-navy-200 bg-white text-navy-900 hover:border-navy-300 hover:bg-navy-50; }
+    .btn-ghost { @apply btn text-navy-700 hover:bg-navy-50; }
+    .btn-danger { @apply btn bg-rose-600 text-white hover:bg-rose-700; }
+    .btn-soft-danger { @apply btn bg-rose-50 text-rose-700 hover:bg-rose-100; }
+
+    /* Kartu & permukaan */
+    .card { @apply rounded-2xl border border-slate-200/80 bg-white shadow-soft; }
+    .card-pad { @apply p-5 sm:p-6; }
+    .eyebrow { @apply text-[11px] font-bold uppercase tracking-[.18em] text-brand-600; }
+    .section-title { @apply font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl; }
+
+    /* Form */
+    .label { @apply mb-1.5 block text-sm font-semibold text-navy-900; }
+    .input { @apply block w-full rounded-xl border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm placeholder:text-slate-400 focus:border-brand-500 focus:ring-brand-500/30; }
+    .input-error { @apply border-rose-400 focus:border-rose-500 focus:ring-rose-500/30; }
+    .help { @apply mt-1 text-xs text-slate-500; }
+    .error { @apply mt-1 text-xs font-medium text-rose-600; }
+    .checkbox { @apply h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500; }
+
+    /* Badge */
+    .badge { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-semibold; }
+
+    /* Tabel admin */
+    .table { @apply min-w-full divide-y divide-slate-200 text-sm; }
+    .table th { @apply bg-slate-50 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500; }
+    .table td { @apply px-4 py-3 align-middle text-slate-700; }
+    .table tbody tr { @apply hover:bg-slate-50/70; }
+
+    /* Konten soal (rich text + rumus) */
+    .rich { @apply leading-relaxed text-slate-800; overflow-wrap: anywhere; }
+    .rich p { @apply mb-2 last:mb-0; }
+    .rich ul { @apply mb-2 list-disc pl-5; }
+    .rich ol { @apply mb-2 list-decimal pl-5; }
+    .rich table { @apply my-3 w-full border-collapse text-sm; display: block; overflow-x: auto; }
+    .rich th, .rich td { @apply border border-slate-300 px-2.5 py-1.5; }
+    .rich th { @apply bg-slate-50 font-semibold; }
+    .rich img { @apply my-2 h-auto max-w-full rounded-lg; }
+    .rich blockquote { @apply border-l-4 border-brand-200 pl-3 italic text-slate-600; }
+    .rich .katex-display { @apply my-2 overflow-x-auto overflow-y-hidden py-1; }
+
+    .nav-link { @apply flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-navy-50 hover:text-navy-900; }
+    .nav-link-active { @apply bg-navy-900 text-white hover:bg-navy-900 hover:text-white shadow-sm; }
+
+    .glass { @apply bg-white/80 backdrop-blur-md; }
+    .grid-bg {
+        background-image: linear-gradient(rgba(23,42,77,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(23,42,77,.05) 1px, transparent 1px);
+        background-size: 32px 32px;
+    }
+}
+
+@layer utilities {
+    .text-balance { text-wrap: balance; }
+    .text-pretty { text-wrap: pretty; }
+    .scrollbar-thin { scrollbar-width: thin; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { scrollbar-width: none; }
+    .mask-fade-x { mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .pb-safe { padding-bottom: max(env(safe-area-inset-bottom), .5rem); }
+}
+
+/* MathQuill editor */
+.mq-editable-field { min-height: 3rem; width: 100%; padding: .75rem 1rem; border-radius: .75rem; border-color: #cbd5e1 !important; font-size: 1.25rem; background: #fff; }
+.mq-editable-field.mq-focused { box-shadow: 0 0 0 3px rgba(51,116,251,.25) !important; border-color: #3374fb !important; }
+
+@layer components {
+    input[type=file].input { @apply cursor-pointer p-1.5 text-slate-500 file:mr-3 file:cursor-pointer file:rounded-lg file:border-0 file:bg-navy-50 file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-navy-900 hover:file:bg-navy-100; }
+}
